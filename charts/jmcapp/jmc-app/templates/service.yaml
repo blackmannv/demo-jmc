@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "jmcapp.fullname" . }}
+  name: {{ include "jmc-app.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ template "jmcapp.name" . }}
-    helm.sh/chart: {{ template "jmcapp.chart" . }}
+    app.kubernetes.io/name: {{ include "jmc-app.name" . }}
+    helm.sh/chart: {{ include "jmc-app.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ template "jmcapp.name" . }}
+    app.kubernetes.io/name: {{ include "jmc-app.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
