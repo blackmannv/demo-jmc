@@ -4,7 +4,7 @@ metadata:
   name: {{ template "jmc-app-chart.fullname" . }}
   labels:
     app.kubernetes.io/name: {{ template "jmc-app-chart.name" . }}
-    helm.sh/chart: {{ include "jmc-app-chart.chart" . }}
+    helm.sh/chart: {{ template "jmc-app-chart.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
