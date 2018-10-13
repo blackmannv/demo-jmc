@@ -2,8 +2,8 @@
 # Default values for sampleapp.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-fullnameOverride: jmc-app-chart
-fullname: jmc-app-chart
+fullnameOverride: jmcapp
+fullname: jmcapp
 replicaCount: 1
 image:
   repository: VALUE_TO_BE_OVERRIDDEN
